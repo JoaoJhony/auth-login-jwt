@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LOGIN</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body
+    class="min-h-screen bg-gradient-to-br from-[#1a5c4a] to-[#3dba8a] flex justify-center items-center"
+  >
+    <!-- Seção principal de login -->
+    <div
+      class="bg-white border-4 border-solid rounded-2xl shadow-lg p-8 w-96 flex flex-col gap-4"
+    >
+      <h1 id="LoginName" class="text-2xl font-bold text-center text-gray-800">
+        Sign in
+      </h1>
+      <form action="script.js" method="post" id="login">
+        <div class="flex flex-col gap-1">
+          <label for="usuario" class="text-sm font-medium text-gray-700"
+            >Usuario</label
+          >
+          <!-- Input com autocomplete desativado por segurança -->
+          <input
+            type="text"
+            id="usuario"
+            autocomplete="off"
+            placeholder="JoaoSilva"
+            class="w-full border border-gray-300 rounded-lg px-4 py-2 outline-none focus:border-green-600"
+          />
+          <span id="erro_usuario" class="text-red-500 text-sm"></span>
+        </div>
+        <br />
+        <div class="flex flex-col gap-1">
+          <label for="senha" class="text-sm font-medium text-gray-700"
+            >Senha</label
+          >
+          <!-- Input com autocomplete desativado por segurança -->
+          <input
+            type="text"
+            id="senha"
+            autocomplete="off"
+            placeholder="123!@ABC"
+            class="w-full border border-gray-300 rounded-lg px-4 py-2 outline-none focus:border-green-600"
+          />
+          <br />
+          <span id="erro_senha" class="text-red-500 text-sm"></span>
+        </div>
+        <button
+          id="botaoLogin"
+          class="bg-[#1a5c4a] w-full border border-black-250 rounded-lg px-4 p-6 text-white hover:opacity-90 cursor-pointer transition"
+          type="button"
+          onclick="return (validarInput(), pegadandoDado());"
+          name="go"
+          value="ok"
+        >
+          ENVIAR
+        </button>
+      </form>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
